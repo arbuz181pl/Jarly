@@ -14,6 +14,7 @@ composeBom = "2026.09.00"
 material3 = "1.5.0-beta01"
 
 junit = "4.13.2"
+jsonTest = "20240303"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
@@ -32,6 +33,7 @@ androidx-compose-material-icons-core = { module = "androidx.compose.material:mat
 androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
 
 junit = { module = "junit:junit", version.ref = "junit" }
+json-test = { module = "org.json:json", version.ref = "jsonTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

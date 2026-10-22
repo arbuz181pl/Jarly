@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- jar glass body -->
+    <path
+        android:fillColor="#2EFFFFFF"
+        android:pathData="M34,44 m9,0 h22 a10,10 0 0,1 10,10 l1.8,23 a10,10 0 0,1 -10,10 h-26.6 a10,10 0 0,1 -10,-10 l1.8,-23 a10,10 0 0,1 10,-10 z" />
+    <!-- honey fill inside glass -->
+    <path
+        android:fillColor="#F5A524"
+        android:pathData="M35,58 q9,-6.5 19,0 t19,0 q9,-4.5 19,0.6 l-1.8,20.4 a10,10 0 0,1 -10,9 h-33.4 a10,10 0 0,1 -10,-9 l-1.8,-20.4 q2,-3 5,-1.4 z" />
+    <!-- honey light layer -->
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M38,64 q7,-4.5 15,0.5 t15,0.5 q7,-3 13,1.2 l-1.6,11.8 a10,10 0 0,1 -10,9 h-22.8 a10,10 0 0,1 -10,-9 l-1.6,-11.8 q1,-2.4 3,-1.2 z" />
+    <!-- glass outline -->
+    <path
+        android:pathData="M34,44 m9,0 h22 a10,10 0 0,1 10,10 l1.8,23 a10,10 0 0,1 -10,10 h-26.6 a10,10 0 0,1 -10,-10 l1.8,-23 a10,10 0 0,1 10,-10 z"
+        android:strokeWidth="2.6"
+        android:strokeColor="#E6FFFFFF" />
+    <!-- glass shine strips -->
+    <path
+        android:fillColor="#66FFFFFF"
+        android:pathData="M36,52 q-2.2,14 0.8,27 q0.5,2.6 3.2,2.6 l2.2,0 q-4.2,-15 -1.8,-29 z" />
+    <path
+        android:fillColor="#4DFFFFFF"
+        android:pathData="M62,55 q2,11 0.2,22 q-0.7,3.8 -4,4.8 q3,-13 1,-26 z" />
+    <!-- lid cap -->
+    <path
+        android:fillColor="#432D14"
+        android:pathData="M38,26 h32 a4,4 0 0,1 4,4 v3 a4,4 0 0,1 -4,4 h-32 a4,4 0 0,1 -4,-4 v-3 a4,4 0 0,1 4,-4 z" />
+    <!-- lid top highlight -->
+    <path
+        android:fillColor="#FFD27D"
+        android:pathData="M38,28.2 h32 a1.8,1.8 0 0,1 1.8,1.8 v0 h-35.6 a1.8,1.8 0 0,1 1.8,-1.8 z" />
+    <!-- neck ring -->
+    <path
+        android:fillColor="#4D3319"
+        android:pathData="M33,40 h42 v4 h-42 z" />
+    <!-- sparkles -->
+    <path
+        android:fillColor="#FFD27D"
+        android:pathData="M73,42 m1.2,0 l0.8,2.9 2.9,0.8 -2.9,0.8 -0.8,2.9 -0.8,-2.9 -2.9,-0.8 2.9,-0.8 z" />
+    <path
+        android:fillColor="#66FCD34D"
+        android:pathData="M28,36 m0.8,0 l0.6,2 2,0.6 -2,0.6 -0.6,2 -0.6,-2 -2,-0.6 2,-0.6 z" />
+</vector>

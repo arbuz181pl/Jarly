@@ -34,6 +34,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -294,7 +295,7 @@ fun SettingsScreen(
                     text = stringResource(R.string.ai_keep_control),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(horizontal = 16.dp),
+                    modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 2.dp, bottom = 14.dp),
                 )
             }
 
@@ -342,7 +343,7 @@ fun SettingsScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 4.dp),
+                        .padding(horizontal = 12.dp, vertical = 6.dp),
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     TextButton(onClick = {
@@ -356,11 +357,15 @@ fun SettingsScreen(
                         Text(stringResource(R.string.backup_import))
                     }
                 }
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline.copy(alpha = 0.2f),
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                )
                 Text(
                     text = stringResource(R.string.privacy_line),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(horizontal = 16.dp),
+                    modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 10.dp, bottom = 14.dp),
                 )
             }
 
@@ -533,7 +538,7 @@ private fun SectionCard(
                 containerColor = MaterialTheme.colorScheme.surfaceVariant,
             ),
         ) {
-            Column {
+            Column(modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)) {
                 content()
             }
         }

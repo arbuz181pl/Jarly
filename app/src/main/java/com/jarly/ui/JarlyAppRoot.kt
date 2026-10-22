@@ -275,15 +275,16 @@ fun MainScreen(store: JarlyStore, currencyCode: String, onOpenSettings: () -> Un
                         modifier = Modifier
                             .fillMaxWidth()
                             .drawBehind {
-                                val pad = 5.dp.toPx()
-                                val topLeft = Offset(-pad, -pad)
-                                val ringSize = Size(size.width + 2 * pad, size.height + 2 * pad)
-                                val radius = CornerRadius((24.dp + 5.dp).toPx())
+                                val pad = 2.dp.toPx()
+                                val labelGap = 8.dp.toPx()
+                                val topLeft = Offset(-pad, labelGap - pad)
+                                val ringSize = Size(size.width + 2 * pad, size.height - labelGap + 2 * pad)
+                                val radius = CornerRadius((24.dp + 2.dp).toPx())
                                 val brush = Brush.sweepGradient(
                                     colorStops = ringStops(spin).toTypedArray(),
                                     center = Offset(size.width / 2f, size.height / 2f),
                                 )
-                                val wGlow = (4.dp + 5.dp * breathe).toPx()
+                                val wGlow = (3.dp + 5.dp * breathe).toPx()
                                 drawRoundRect(
                                     brush = brush,
                                     topLeft = topLeft,
@@ -305,7 +306,7 @@ fun MainScreen(store: JarlyStore, currencyCode: String, onOpenSettings: () -> Un
                                     topLeft = topLeft,
                                     size = ringSize,
                                     cornerRadius = radius,
-                                    style = Stroke(width = 2.5.dp.toPx()),
+                                    style = Stroke(width = 2.dp.toPx()),
                                     alpha = 0.9f,
                                 )
                             }

@@ -170,9 +170,9 @@ object Currencies {
     ).sortedWith(compareBy { it.country.lowercase() })
 
     val POPULAR = listOf(
-        CurrencyEntry("PLN", "z\u0142", "Poland", "Polish zloty"),
-        CurrencyEntry("EUR", "\u20AC", "Germany | France | Spain | Italy | ...", "Euro"),
         CurrencyEntry("USD", "$", "United States", "US dollar"),
+        CurrencyEntry("EUR", "\u20AC", "Germany | France | Spain | Italy | ...", "Euro"),
+        CurrencyEntry("PLN", "z\u0142", "Poland", "Polish zloty"),
         CurrencyEntry("GBP", "\u00A3", "United Kingdom", "Pound sterling"),
         CurrencyEntry("CZK", "K\u010D", "Czechia", "Czech koruna"),
         CurrencyEntry("UAH", "\u20B4", "Ukraine", "Ukrainian hryvnia"),

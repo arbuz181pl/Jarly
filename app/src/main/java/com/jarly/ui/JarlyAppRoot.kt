@@ -262,10 +262,11 @@ fun MainScreen(store: JarlyStore, currencyCode: String, onOpenSettings: () -> Un
                         modifier = Modifier
                             .matchParentSize()
                             .drawBehind {
-                                val inset = 5.dp.toPx()
-                                val topLeft = Offset(inset, inset)
-                                val ringSize = Size(size.width - 2 * inset, size.height - 2 * inset)
-                                val radius = CornerRadius((24.dp + 5.dp).toPx())
+                                val insetX = 4.dp.toPx()
+                                val insetTop = 3.dp.toPx()
+                                val topLeft = Offset(insetX, insetTop)
+                                val ringSize = Size(size.width - 2 * insetX, size.height - insetTop)
+                                val radius = CornerRadius(30.dp.toPx())
                                 val brush = Brush.sweepGradient(
                                     colorStops = ringStops(spin).toTypedArray(),
                                     center = Offset(size.width / 2f, size.height / 2f),

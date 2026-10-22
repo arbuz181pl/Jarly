@@ -258,15 +258,27 @@ fun MainScreen(store: JarlyStore, currencyCode: String, onOpenSettings: () -> Un
                     return out
                 }
                 Box(modifier = Modifier.weight(1f).padding(10.dp)) {
-                    Box(
+                    OutlinedTextField(
+                        value = input,
+                        onValueChange = { input = it },
+                        label = { Text(stringResource(R.string.input_hint)) },
+                        singleLine = true,
+                        shape = RoundedCornerShape(24.dp),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedContainerColor = MaterialTheme.colorScheme.surface,
+                            unfocusedContainerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.75f),
+                            focusedBorderColor = Color.Transparent,
+                            unfocusedBorderColor = Color.Transparent,
+                        ),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                        keyboardActions = KeyboardActions(onDone = { typedToItem() }),
                         modifier = Modifier
-                            .matchParentSize()
+                            .fillMaxWidth()
                             .drawBehind {
-                                val insetX = 4.dp.toPx()
-                                val insetTop = 3.dp.toPx()
-                                val topLeft = Offset(insetX, insetTop)
-                                val ringSize = Size(size.width - 2 * insetX, size.height - insetTop)
-                                val radius = CornerRadius(30.dp.toPx())
+                                val pad = 5.dp.toPx()
+                                val topLeft = Offset(-pad, -pad)
+                                val ringSize = Size(size.width + 2 * pad, size.height + 2 * pad)
+                                val radius = CornerRadius((24.dp + 5.dp).toPx())
                                 val brush = Brush.sweepGradient(
                                     colorStops = ringStops(spin).toTypedArray(),
                                     center = Offset(size.width / 2f, size.height / 2f),
@@ -296,24 +308,7 @@ fun MainScreen(store: JarlyStore, currencyCode: String, onOpenSettings: () -> Un
                                     style = Stroke(width = 2.5.dp.toPx()),
                                     alpha = 0.9f,
                                 )
-                            },
-                    )
-                    OutlinedTextField(
-                        value = input,
-                        onValueChange = { input = it },
-                        label = { Text(stringResource(R.string.input_hint)) },
-                        singleLine = true,
-                        shape = RoundedCornerShape(24.dp),
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedContainerColor = MaterialTheme.colorScheme.surface,
-                            unfocusedContainerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.75f),
-                            focusedBorderColor = Color.Transparent,
-                            unfocusedBorderColor = Color.Transparent,
-                        ),
-                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-                        keyboardActions = KeyboardActions(onDone = { typedToItem() }),
-                        modifier = Modifier
-                            .fillMaxWidth()
+                            }
                     )
                 }
                 FloatingActionButton(

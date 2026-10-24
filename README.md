@@ -1,6 +1,6 @@
 <div align="center">
 
-# Jarly
+# Jarly (WIP, Broken) 
 
 ### A shopping list and pantry jar for Android — offline, private, and yours
 
